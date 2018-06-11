@@ -17,6 +17,7 @@ export class GoogleMapComponent implements OnInit {
     const mapOptions = {
       center: new google.maps.LatLng(18.5793, 73.8143),
       zoom: 10,
+      maxZoom: 16,
       mapTypeId: google.maps.MapTypeId.ROADMAP
     };
     this.map = new google.maps.Map(this.googleMapElement.nativeElement, mapOptions);
@@ -39,7 +40,7 @@ export class GoogleMapComponent implements OnInit {
       },
       tileSize: new google.maps.Size(256, 256),
       minZoom: 1,
-      maxZoom: 20,
+      maxZoom: 16,
       opacity: 0.6
     });
     this.map.overlayMapTypes.push(BreezoMeterLayer);
