@@ -1,4 +1,11 @@
-# MyApp
+# Angular Breezometer Tiles
+
+# Getting started
+1) Clone the repo
+2) Make sure you have installed NPM and Angular CLI
+3) Cd into the cloned directory and run npm install
+4) Go to file ```/src/app/google-map/google-map.component.ts``` and add you BreezoMeter API key.
+5) Run in the terminal ``` ng serve --open ``` 
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.8.
 
