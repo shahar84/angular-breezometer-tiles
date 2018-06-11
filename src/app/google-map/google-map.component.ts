@@ -30,17 +30,17 @@ export class GoogleMapComponent implements OnInit {
     // Create a new ImageMapType layer.
     const BreezoMeterLayer = new google.maps.ImageMapType({
       name: layerID,
-      getTileUrl: function(coord, zoom) {
+      getTileUrl: function(coordinates: any, zoom: any) {
         const url = TILE_URL
-          .replace('{x}', coord.x)
-          .replace('{y}', coord.y)
+          .replace('{x}', coordinates.x)
+          .replace('{y}', coordinates.y)
           .replace('{z}', zoom);
         return url;
       },
       tileSize: new google.maps.Size(256, 256),
       minZoom: 1,
       maxZoom: 20,
-      opacity: 0.4
+      opacity: 0.6
     });
     this.map.overlayMapTypes.push(BreezoMeterLayer);
   }
